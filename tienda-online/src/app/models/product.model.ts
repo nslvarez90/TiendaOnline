@@ -10,5 +10,6 @@ export class Product {
     public description?: string,
     public price?: number,
     public currency?: string,
+    public total_aviable?:number
   ) { }
 }

@@ -4,6 +4,6 @@
 */
 
 export const SERVER = {
-    CONTEXT: 'https://api.exchangeratesapi.io/v1',
+    CONTEXT: 'https://data.fixer.io/api',
 };
 

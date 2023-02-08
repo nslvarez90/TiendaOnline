@@ -1,1 +1,37 @@
-<p>produc-list works!</p>
+<div class="col-lg-8 mx-auto p-3 py-md-5" *ngIf="isReady">
+    <header class="d-flex align-items-end justify-content-end pb-3 mb-5 border-bottom">
+        <a routerlink="../cart" href="/store/cart" class="d-flex align-items-center text-dark text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart"
+                viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+            <span class="fs-4">Shopping Cart <span class="badge bg-warning"> {{cartTotal}} </span>
+            </span>
+        </a>
+    </header>
+
+    <main>
+        <h1>{{title}}</h1>
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" value="USD" autocomplete="off" (change)="changeCurrency($event)" checked>
+            <label class="btn btn-outline-primary" for="btnradio1">USD</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" value="EUR" autocomplete="off" (change)="changeCurrency($event)" >
+            <label class="btn btn-outline-primary" for="btnradio2">EUR</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" value="CAD"  autocomplete="off" (change)="changeCurrency($event)" >
+            <label class="btn btn-outline-primary" for="btnradio3">CAD</label>
+        </div>
+        <hr class="col-12 mb-5">
+        <div class="container">
+            <div class="row" *ngFor="let product of productList;let i = index">
+                <app-product-single [product]="product" [icon]="productIcons[i]"
+                    (productPos)="addToCart($event)"></app-product-single>
+            </div>
+        </div>
+    </main>
+    <footer class="pt-5 my-5 text-muted border-top">
+        Test APP &middot; &copy; 2023
+    </footer>
+</div>

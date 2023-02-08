@@ -14,6 +14,7 @@ export const CONSTANTS = {
         PATCH: 'patch',
     },
     CURRENCY: {
-        KEY: 'Yflzyb9AO5wDKI3T7dBfzoZD1eSprmSG'
-    }
+        KEY: 'i3yNoCunpwc2Qn9wDNWw1zQlg7JGYSB6'
+    },
+    ICONS:['bi-car-front', 'bi-sd-card', 'bi-wallet', 'bi-bus-front', 'bi-egg', 'bi-egg-fried', 'bi-pc', 'bi-pc-display', 'bi-bicycle', 'bi-bus-front', 'bi-airplane']
 };

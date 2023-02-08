@@ -15,15 +15,11 @@ import { PROXY_SERVICES } from '../proxies/proxy-services.routes';
 @Injectable({
     providedIn: 'root',
 })
-export class ConvertService {
+export class ProductService {
 
     constructor(private router: Router, private http: HttpClient) { }
 
-    convertAmount(to: string, from: string, amount: any): Observable<any> {       
-       // headers.append("apikey", CONSTANTS.CURRENCY.KEY);
-        return this.http.get(`${SERVER.CONTEXT}${PROXY_SERVICES.exchange.convert}${from}&to=${to}&amount=${amount}`)
-
-
-
+    public getAllProduct(url: string): Observable<any> {
+        return this.http.get(url);
     }
 }

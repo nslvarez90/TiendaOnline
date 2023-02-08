@@ -7,7 +7,7 @@
 
 export const  PROXY_SERVICES = {
     exchange: {
-        convert: '/convert?to=',
+        convert: '/convert?access_key=i3yNoCunpwc2Qn9wDNWw1zQlg7JGYSB6&from',
     },
     products: {        
         getAll: '/products',
